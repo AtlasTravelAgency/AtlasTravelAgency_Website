@@ -207,3 +207,96 @@ nav {
   width: 100%;
   height: 147px;
 }
+
+.featuredTrips .title {
+  height: 147px;
+  width: 100%;
+  padding-bottom: 64px;
+}
+
+.featuredTrips h2 {
+  text-align: center;
+  color: var(--dark-blue-color);
+  font-size: var(--font-size-h2);
+  font-weight: 500;
+}
+
+.card-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 24px;
+  row-gap: 30px;
+  padding: 0 48px;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 432px;
+  height: 516px;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card .image {
+  height: 380px;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  overflow: hidden;
+  border: none;
+}
+
+.card img {
+  border: none;
+  height: 380px;
+  width: auto;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.card img:hover {
+  scale: 1.1;
+}
+
+.card .box {
+  position: absolute;
+  width: 160px;
+  height: 48px;
+  background-color: white;
+  top: 0;
+  right: 0;
+  border-radius: 0 20px 0 20px;
+}
+
+.description {
+  padding: 16px;
+  color: var(--dark-blue-color);
+}
+
+.country {
+  font-size: var(--font-size-s);
+}
+
+.packName {
+  font-size: 24px;
+}
+
+.description div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.days {
+  font-size: var(--font-size-s);
+}
+
+.price {
+  font-size: var(--font-size-l);
+}
