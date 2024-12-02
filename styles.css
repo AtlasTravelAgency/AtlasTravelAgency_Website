@@ -98,7 +98,7 @@ nav {
   cursor: pointer;
 }
 
-nav .hamburger{
+nav .hamburger {
   display: none;
   cursor: pointer;
 }
@@ -118,14 +118,13 @@ nav .hamburger{
   padding-left: 48px;
   padding-right: 48px;
   position: absolute;
-
 }
 
-.show-menu{
+.show-menu {
   transform: translateY(0);
 }
 
-.menu .header{
+.menu .header {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -133,56 +132,54 @@ nav .hamburger{
   align-items: end;
 }
 
-#logo{
+#logo {
   height: 60px;
   width: auto;
 }
 
-#close-icon{
+#close-icon {
   height: 40px;
   width: auto;
 }
 
-.menu img{
+.menu img {
   height: auto;
   width: 120px;
   padding-top: 48px;
 }
 
-.separation{
-width: 100%;
-margin-top: 20px;
-border: 1px solid var(--dark-blue-color);
+.separation {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid var(--dark-blue-color);
 }
 
-.menu li{
+.menu li {
   padding-top: 20px;
   list-style: none;
 }
 
-.menu li a{
-text-decoration: none;
-color: var(--dark-blue-color);
-font-size: 20px;
+.menu li a {
+  text-decoration: none;
+  color: var(--dark-blue-color);
+  font-size: 20px;
 }
 
 @media (max-width: 1024px) {
+  .nav-links,
+  #navIcon {
+    display: none;
+  }
+  nav .hamburger {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+  }
 
-.nav-links, #navIcon{
-  display: none;
+  .menu.active {
+    display: flex;
+  }
 }
-nav .hamburger{
-  display: flex;
-  justify-content: flex-end;
-  align-items: end;
-}
-
-.menu.active {
-  display: flex
-}
-
-}
-
 
 /* Initially hide the menu */
 .menu {
@@ -206,8 +203,6 @@ nav .hamburger{
   align-self: flex-end;
   cursor: pointer;
 }
-
-
 
 /* hero section */
 
@@ -325,7 +320,6 @@ nav .hamburger{
 
 /*Featured Trips Section*/
 
-
 .trips_display {
   width: 100%;
   height: auto;
@@ -389,9 +383,10 @@ nav .hamburger{
   transition: all 0.2s;
 }
 
+/*
 .card img:hover {
   scale: 1.1;
-}
+}*/
 
 .card .box {
   position: absolute;
@@ -432,21 +427,64 @@ nav .hamburger{
   font-size: var(--font-size-l);
 }
 
-
 /*media queries card container*/
 
 @media (max-width: 1300px) {
-
- .card{
-  width: calc(50% - 24px);
- }
-  
+  .card {
+    width: calc(50% - 24px);
   }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .card {
+    width: calc(100% - 24px);
+  }
+}
 
-    .card{
-     width: calc(100% - 24px);
-    }
-     
-     }
+.slideshow-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 1s ease-in-out; /* Smooth transition for fade effect */
+  position: absolute; /* Stack all slides on top of each other */
+  width: 100%; /* Ensure slides take the full width */
+  height: auto; /* Keep the aspect ratio of images */
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.mySlides.show {
+  opacity: 1; /* Make the active slide visible */
+  position: relative; /* Ensure the visible slide is on top */
+  z-index: 1; /* Ensure the active slide is on top of others */
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  user-select: none;
+  color: white;
+  z-index: 2; /* Keep buttons above the slides */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
