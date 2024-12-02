@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="Logos/Favicon.png" type="image/x-icon">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'bll3puu',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+</head>
+
+<body class="bg-light">
+    <!-- back to homepage button -->
+    <div class="position-relative">
+        <img class="mb-4 d-block mx-auto" src="Logos/Checkout_banner.jpg" alt="" width="100%" height="auto">
+        <a href="index.html" class="position-absolute top-0 start-0 m-3 btn btn-dark btn-sm">
+            Back to Homepage
+        </a>
+    </div>>
+    <!-- Checkout form section -->
+    <div class="container">
+        <div class="container">
+
+            <div class="py-5 text-center">
+                <h2>Checkout form</h2>
+                <p class="lead">Thank you for choosing Strings Theory, your premier destination for string
+                    theory-inspired musical instruments and
+                    accessories! Please review your order details carefully before proceeding to payment. Your
+                    satisfaction is our priority,
+                    and we're here to ensure a seamless checkout experience. If you have any special requests or need
+                    assistance, don't
+                    hesitate to reach out. Once your order is complete, you'll receive a confirmation email with
+                    tracking information to
+                    follow your purchase's journey to your doorstep. We appreciate your support and can't wait to bring
+                    the harmony of
+                    science and music into your life!
+                </p>
+            </div>
+            <!-- Container do resumo da compra -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">Your cart</span>
+                    </h4>
+                    <div class="card shadow-sm p-4 mb-3">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="Images/Acoustic Guitars/Guitar5.jpg" alt="Product Image" class="img-fluid"
+                                style="width: 60px; height: auto; object-fit: cover; border-radius: 4px;">
+                            <div class="ms-3">
+                                <h5 class="mb-1">Cosmic Chord</h5>
+                                <p class="text-muted mb-0">$699.00</p>
+                            </div>
+                            <div class="input-group ml-2 d-flex justify-content-end">
+                                <button class="btn btn-dark" type="button" id="button-decrement">-</button>
+                                <input type="text" class="form-control text-center" value="1" min="0" max="100"
+                                    id="number-input" style="max-width: 40px;">
+                                <button class="btn btn-dark" type="button" id="button-increment">+</button>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="d-flex justify-content-between">
+                                <span>Subtotal:</span>
+                                <span>$699.00</span>
+                            </h6>
+                            <h6 class="d-flex justify-content-between">
+                                <span>Shipping:</span>
+                                <span>Free</span>
+                            </h6>
+                            <div class="d-flex justify-content-between">
+                                <div class="text-success">
+                                    <h6 class="my-0">Promo code</h6>
+                                    <small>ILOVEMUSIC</small>
+                                </div>
+                                <span class="text-success">-$5</span>
+                            </div>
+                            <hr>
+                            <h5 class="d-flex justify-content-between fw-bold">
+                                <span>Total:</span>
+                                <span>$694.00</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <form class="card p-2 mb-5">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Promo code">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-dark rounded-start-0">Redeem</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Container dos dados da compra do usuario -->
+                <div class="col-lg-8">
+
+                    <h4 class="mb-3">Billing Address</h4>
+                    <form novalidate>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input id="firstName" class="form-control" type="text" name="" placeholder="Hélder"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input id="lastName" class="form-control" type="text" name="" placeholder="Costa"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Valid last name is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="username" class="form-label">Username</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Username"
+                                        aria-label="Username">
+                                    <span class="input-group-text">@</span>
+                                    <input type="text" class="form-control" placeholder="gmail.com" aria-label="Server">
+                                </div>
+                                <div class="invalid-feedback">
+                                    Valid username is required.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="1234 Main St"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Please enter your shipping address.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                            </div>
+                            <div class="col-md-5">
+                                <label for="country" class="form-label">Country</label>
+                                <select id="country" class="form-select">
+                                    <option value="">Choose...</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="USA">USA</option>
+                                    <option value="China">China</option>
+                                    <option value="Portugal">Portugal</option>
+                                    <option value="Spain">Spain</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Valid country is required.
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="state" class="form-label">State</label>
+                                <select id="state" class="form-select">
+                                    <option value="aveiro">Aveiro</option>
+                                    <option value="beja">Beja</option>
+                                    <option value="braga">Braga</option>
+                                    <option value="braganca">Bragança</option>
+                                    <option value="castelo_branco">Castelo Branco</option>
+                                    <option value="coimbra">Coimbra</option>
+                                    <option value="evora">Évora</option>
+                                    <option value="faro">Faro</option>
+                                    <option value="guarda">Guarda</option>
+                                    <option value="leiria">Leiria</option>
+                                    <option value="lisboa">Lisboa</option>
+                                    <option value="portalegre">Portalegre</option>
+                                    <option value="porto">Porto</option>
+                                    <option value="santarem">Santarém</option>
+                                    <option value="setubal">Setúbal</option>
+                                    <option value="viana_do_castelo">Viana do Castelo</option>
+                                    <option value="vila_real">Vila Real</option>
+                                    <option value="viseu">Viseu</option>
+                                    <option value="madeira">Madeira</option>
+                                    <option value="acores">Açores</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Valid state is required.
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="zipcode" class="form-label">Zipcode</label>
+                                <input id="zipcode" class="form-control" type="number" name="" placeholder="4000-000"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Valid zipcode is required.
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <div class="form-check">
+                            <input id="sameAddress" type="checkbox" class="form-check-input">
+                            <label class="form-check-label" for="sameAddress">Shipping address is the same as
+                                billing.</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="saveInfo" type="checkbox" class="form-check-input">
+                            <label class="form-check-label" for="saveInfo">Save this info.</label>
+                        </div>
+                        <hr class="my-4">
+                        <h4 class="mb-3">Payments</h4>
+                        <div class="form-check">
+                            <input type="radio" name="paymentMethod" class="form-check-input" id="creditCard" required>
+                            <label for="creditCard" class="form-check-label">
+                                <i class="fab fa-cc-visa me-2"></i> Credit Card
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input name="paymentMethod" type="radio" class="form-check-input" id="directDebit" required>
+                            <label for="directDebit" class="form-check-label">
+                                <i class="fas fa-money-check-alt me-2"></i> Direct Debit
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input name="paymentMethod" type="radio" class="form-check-input" id="paypal" required>
+                            <label for="paypal" class="form-check-label">
+                                <i class="fab fa-paypal me-2"></i> PayPal
+                            </label>
+                        </div>
+                        <div class="row my-3 gy-3">
+                            <div class="col-md-6">
+                                <label for="fullName" class="form-label">Name on card</label>
+                                <input type="text" class="form-control" id="fullName">
+                                <small class="text-muted">Full name as displayed on card.</small>
+                                <div class="invalid-feedback">
+                                    Name on card is required.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cc-number" class="form-label">Credit Card Number</label>
+                                <input type="text" class="form-control" id="cc-number">
+                                <div class="invalid-feedback">
+                                    Credit Card number is required.
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="cc-expire" class="form-label">Expiration</label>
+                                <input type="text" class="form-control" id="cc-expire">
+                                <div class="invalid-feedback">
+                                    Expiration is required.
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="cc-cvv" class="form-label">CVV</label>
+                                <input type="text" class="form-control" id="cc-cvv">
+                                <div class="invalid-feedback">
+                                    CVV is required.
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <button class="btn btn-dark btn-lg btn-block mb-5 ">Continue to checkout</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <hr class="my-4">
+        <!-- Footer -->
+        <footer>
+            <div id="footer1">
+                <div id="navigation">
+                    <ul>
+                        <li><a href="index.html/#aboutUs">About Us</a></li>
+                        <li><a href="index.html/#acousticGuitars">Acoustic Guitars</a></li>
+                        <li><a href="index.html/#electricGuitars">Electric Guitars</a></li>
+                        <li><a href="index.html/#pianos">Pianos</a></li>
+                        <li><a href="index.html/#contact">Contacts</a></li>
+                    </ul>
+                </div>
+                <div id="contactInfo">
+                    <h4>Contact Info:</h4>
+                    <p>Call: +123-456-7890</p>
+                    <p>Email: support@stringstheory.com</p>
+                    <p>Address: 123 Music Lane, Guitar City</p>
+                </div>
+            </div>
+            <div id="footer2">
+                <h4>Newsletter Subscription</h4>
+                <div id="newsletter">
+                    <p>Sign up for updates and special offers!</p>
+                    <input type="email" name="" id="" required>
+                    <div id="button-container">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div id="footer3">
+                <div id="socialmedialinks">
+                    <div>
+                        <ul>
+                            <li><img src="Logos/facebook.png" alt=""></li>
+                            <li><img src="Logos/instagram.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><img src="Logos/visa.png" alt=""></li>
+                            <li><img src="Logos/paypal.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="paymentOptions"></div>
+            </div>
+            <div id="footer4">
+                <ul>
+                    <li><a href="">Terms of Service</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Cookies</a></li>
+                </ul>
+                <p>© 2024 Strings Theory Store by Hélder Badim. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+</html>
