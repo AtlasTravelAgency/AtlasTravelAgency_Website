@@ -55,6 +55,35 @@ nav {
   max-width: 100%;
 }
 
+.nav-container-left {
+  display: flex;
+  align-items: center;
+}
+
+#globe {
+  width: 60px;
+  height: 60px;
+  margin-right: 12px;
+}
+
+#name {
+  width: 93px;
+  height: 48px;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  -webkit-animation: rotating 15s linear infinite;
+}
+
 .nav-links {
   display: flex;
   justify-content: space-between;
