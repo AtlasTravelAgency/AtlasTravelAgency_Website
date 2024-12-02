@@ -71,7 +71,7 @@ nav {
   height: 48px;
 }
 
-@-webkit-keyframes rotating {
+@keyframes rotating {
   from {
     -webkit-transform: rotate(0deg);
   }
@@ -81,7 +81,7 @@ nav {
 }
 
 .rotating {
-  -webkit-animation: rotating 15s linear infinite;
+  animation: rotating 15s linear infinite;
 }
 
 .nav-links {
