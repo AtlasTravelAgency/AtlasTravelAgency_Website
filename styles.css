@@ -154,7 +154,6 @@ nav .hamburger {
 }
 
 .menu .header {
-  
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -164,7 +163,6 @@ nav .hamburger {
   padding-bottom: 48px;
   flex-direction: row;
   justify-content: space-between;
-  
 }
 
 #logo {
@@ -187,7 +185,7 @@ nav .hamburger {
   border: 1px solid var(--dark-blue-color);
 }
 
-.menu ul{
+.menu ul {
   padding-left: 0;
 }
 
@@ -528,7 +526,48 @@ nav .hamburger {
   right: 10px;
 }
 
+/*footer*/
 
+footer {
+  display: flex;
+  align-items: center;
+  max-width: 1600px;
+  background-color: var(--dark-blue-color);
+  padding: 48px 64px 0 64px;
+  height: 30vh;
+}
+
+.footer-container-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.company {
+  margin-right: 24px;
+}
+
+.legal {
+  margin-right: 24px;
+}
+
+.follow {
+  margin-right: 24px;
+}
+
+.footer p:first-of-type {
+  font-size: var(--font-size-l);
+  margin-bottom: 24px;
+}
+
+.footer ul:first-of-type {
+  list-style: none;
+}
 
 /*PRODUCT PAGE*/
 
@@ -538,7 +577,6 @@ nav .hamburger {
   margin: auto;
   overflow: hidden;
   height: 600px;
-
 }
 
 .slider {
@@ -578,32 +616,32 @@ nav .hamburger {
   background-color: #717171;
 }
 
-.pp-text{
+.pp-text {
   padding-top: 64px;
   padding-left: 162px;
   padding-right: 162px;
 }
 
-.pp-text h2{
+.pp-text h2 {
   font-size: var(--font-size-h2);
   color: var(--dark-blue-color);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 
-.pp-text h4{
+.pp-text h4 {
   font-size: var(--font-size-h4);
   color: var(--dark-blue-color);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 
-.travel-details{
+.travel-details {
   padding: 64px 48px;
   height: 100px;
 }
 
-.travel-details-container{
+.travel-details-container {
   padding: 15px 16px;
   background-color: var(--light-grey-color);
   border-radius: 30px;
@@ -612,7 +650,7 @@ nav .hamburger {
   align-items: center;
 }
 
-.travel-details-list{
+.travel-details-list {
   padding: 0;
   width: 100%;
   display: flex;
@@ -621,10 +659,10 @@ nav .hamburger {
   align-items: center;
 }
 
-.travel-details-list li{
+.travel-details-list li {
   display: flex;
   align-items: center;
-  width:186px ;
+  width: 186px;
 }
 
 /* CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE */
@@ -638,7 +676,6 @@ nav .hamburger {
 #checkoutform-aside-summary-box .side-summary {
   background-color: transparent;
 }
-
 
 #checkoutform-aside-summary-box h5 {
   font-weight: bold;
@@ -665,6 +702,4 @@ nav .hamburger {
 
 .btn-outline-dark:hover {
   background-color: var(--yellow-color);
-  
-
 }
