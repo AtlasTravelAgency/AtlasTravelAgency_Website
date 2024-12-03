@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>Atlas</title>
 </head>
 <body>
@@ -42,26 +47,82 @@
         </ul>
     </div>
 
-    <div class="slideshow-container image-container">
-        <div class="mySlides fade">
+    <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
             <img src="Images/Landing_Page/Featured_Trips/Card1 - Images/Tuscany1.jpg" alt="Slide 1">
-        </div>
-        <div class="mySlides fade">
+          </div>
+          <div class="slide">
             <img src="Images/Landing_Page/Featured_Trips/Card1 - Images/Tuscany2.jpg" alt="Slide 2">
+          </div>
+          <div class="slide">
+            <img src="Images/Landing_Page/Featured_Trips/Card3 - Images/Tanzania3.jpg" alt="Slide 3">
+          </div>
         </div>
-        <div class="mySlides fade">
-            <img src="Images/Landing_Page/Featured_Trips/Card1 - Images/Tuscany3.jpg" alt="Slide 3">
+      
+        <!-- Navigation Arrows -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      
+        <!-- Dots for Navigation -->
+        <div class="dots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-        <div class="mySlides fade">
-            <img src="Images/Landing_Page/Featured_Trips/Card1 - Images/Tuscany4.jpg" alt="Slide 4">
+      </div>
+      <div class="pp-text">
+        <h2>South America Wonders</h2>
+        <h4>Discover the diverse beauty of South America on a 16-day adventure through Brazil, Argentina, and Peru. From vibrant cities to ancient ruins and stunning natural wonders, this trip is a journey of a lifetime.</h4>
+      </div>
+      <div class="travel-details">
+        <div class="travel-details-container">
+           <ul class="travel-details-list">
+            <li>
+                <img src="" alt="">
+                <div>
+                    <p>Start at</p>
+                    <p>Rio de Janeiro</p>
+                </div>
+            </li>
+            <li>
+                <img src="" alt="">
+                <div>
+                    <p>End at</p>
+                    <p>Lima</p>
+                </div>
+            </li>
+            <li>
+                <img src="" alt="">
+                <div>
+                    <p>Duration</p>
+                    <p>16 Days</p>
+                </div>
+            </li>
+            <li>
+                <img src="" alt="">
+                <div>
+                    <p>Group size</p>
+                    <p>16 people</p>
+                </div>
+            </li>
+            <li>
+                <img src="" alt="">
+                <div>
+                    <p>Difficulty</p>
+                    <p>Moderate</p>
+                </div>
+            </li>
+            <li>
+                <img src="" alt="">
+                <div>
+                    <p>Style</p>
+                    <p>Adventure</p>
+                </div>
+            </li>
+           </ul>
         </div>
-        <div class="mySlides fade">
-            <img src="Images/Landing_Page/Featured_Trips/Card1 - Images/Tuscany5.jpg" alt="Slide 5">
-        </div>
-        <!-- Navigation Buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    
+      </div>
+    <script src="script.js"></script>
 </body>
 </html>

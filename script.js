@@ -65,3 +65,43 @@ function showSlides(n, slideshowIndex) {
     dots[slideIndices[slideshowIndex] - 1].classList.add("active");
   }
 }
+
+
+//PRODUCT PAGE CODE
+
+let currentIndex = 0;
+
+function showSlide(index) {
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
+  const totalSlides = slides.length;
+
+  // Wrap around slide index
+  if (index >= totalSlides) {
+    currentIndex = 0;
+  } else if (index < 0) {
+    currentIndex = totalSlides - 1;
+  } else {
+    currentIndex = index;
+  }
+
+  // Update the slider position
+  const slider = document.querySelector(".slider");
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  // Update dot styles
+  dots.forEach((dot) => dot.classList.remove("active"));
+  dots[currentIndex].classList.add("active");
+}
+
+function changeSlide(direction) {
+  showSlide(currentIndex + direction);
+}
+
+function currentSlide(index) {
+  showSlide(index - 1);
+}
+
+// Initialize the slider
+showSlide(currentIndex);
+
