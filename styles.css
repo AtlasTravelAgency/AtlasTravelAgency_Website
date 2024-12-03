@@ -1,0 +1,786 @@
+
+
+/*variable */
+:root {
+  --background-color: #f6f6f6;
+  --dark-blue-color: #002247;
+  --light-blue-color: #18839f;
+  --lighter-blue-color: #c7dce2;
+  --yellow-color: #f9a935;
+  --grey-color: #949ba2;
+  --light-grey-color: #e8edef;
+  --font-size-h1: 80px;
+  --font-size-h2: 64px;
+  --font-size-h3: 48px;
+  --font-size-h4: 32px;
+  --font-size-s: 16px;
+  --font-size-m: 20px;
+  --font-size-l: 24px;
+  --padding-xl: 64px;
+  --padding-l: 48px;
+  --padding-m: 30px;
+  --padding-s: 24px;
+  --padding-xs: 16px;
+}
+
+/*general structure*/
+* {
+  margin: 0;
+}
+
+html {
+  background-color: var(--background-color);
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1600px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  position: relative;
+}
+
+/*navbar*/
+nav {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding-m) var(--padding-l) var(--padding-l) var(--padding-l);
+  font-family: "Poppins", sans-serif;
+  /*position: sticky;*/
+  top: 0;
+  z-index: 1000;
+  background-color: var(--background-color);
+  max-height: 138px;
+  align-items: center;
+  max-width: 100%;
+}
+
+.nav-container-left {
+  display: flex;
+  align-items: center;
+}
+
+#globe {
+  width: 60px;
+  height: 60px;
+  margin-right: 12px;
+}
+
+#name {
+  width: 93px;
+  height: 48px;
+}
+
+/* @keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotating 5s ease-in-out;
+} */
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 452px;
+  list-style: none;
+  padding: 17px 0;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark-blue-color);
+  font-size: var(--font-size-m);
+  transition: all 0.1s; /*não gosto do efeito*/
+}
+
+.nav-links a:hover {
+  color: var(--dark-blue-color);
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.nav-container {
+  width: 165px;
+  height: 60px;
+  display: flex;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+#navIcon {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+nav .hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.menu {
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  padding: 10px;
+  list-style: none;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 48px;
+  padding-right: 48px;
+  position: absolute;
+}
+
+.show-menu {
+  transform: translateY(0);
+}
+
+.menu .header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 138px;
+  padding-top: 30px;
+  padding-bottom: 48px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#logo {
+  height: 60px;
+  width: auto;
+}
+
+#close-icon {
+  height: 24px;
+  width: auto;
+}
+
+.menu img {
+  height: auto;
+  width: 120px;
+}
+
+.separation {
+  width: 100%;
+  border: 1px solid var(--dark-blue-color);
+}
+
+.menu ul {
+  padding-left: 0;
+}
+
+.menu li {
+  padding-top: 20px;
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: var(--dark-blue-color);
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .nav-links,
+  #navIcon {
+    display: none;
+  }
+  nav .hamburger {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+
+/* Initially hide the menu */
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  z-index: 1000;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.menu.active {
+  display: flex;
+  padding: 0;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+#close-icon {
+  cursor: pointer;
+}
+
+/* hero section */
+
+.hero {
+  padding: 0 24px;
+  height: 530px;
+  max-width: 1600px;
+}
+
+.hero-image {
+  background-color: var(--background-color);
+  height: 100%;
+  max-width: 100%;
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.hero-image img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.hero-searchBar {
+  position: absolute;
+  box-sizing: border-box;
+  top: 15%;
+  display: flex;
+  max-width: 912px;
+  height: 84px;
+  list-style: none;
+  background-color: var(--background-color);
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: var(--padding-s) var(--padding-xs);
+}
+
+.hero-searchBar li {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-searchBar img {
+  width: 24px;
+  height: 24px;
+}
+
+.hero-searchBar li button {
+  max-width: 160px;
+  width: 160px;
+  height: 60px;
+  border-radius: 20px;
+  font-size: var(--font-size-l);
+  font-family: inherit;
+  background-color: var(--yellow-color);
+  border: none;
+  color: var(--background-color);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hero-searchBar li button:hover {
+  opacity: 0.8;
+}
+
+.hero-searchBar .button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-searchBar li input[type="text"] {
+  width: 100%;
+  padding: 12px 20px 12px 10px;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--font-size-m);
+}
+
+.hero-message {
+  display: flex;
+  height: 264px;
+  padding: 56px 48px 0 48px;
+}
+
+.hero-message h1 {
+  width: 67%;
+  font-size: var(--font-size-h1);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: var(--dark-blue-color);
+}
+
+.hero-message p {
+  display: flex;
+  align-items: end;
+  width: 33%;
+  font-size: var(--font-size-l);
+  color: var(--dark-blue-color);
+}
+
+.hero-message-two {
+  box-sizing: border-box;
+  height: 147px;
+  padding-bottom: 64px;
+  margin-bottom: 10px;
+}
+
+/*Featured Trips Section*/
+
+.trips_display {
+  width: 100%;
+  height: auto;
+}
+
+.trips_display .title {
+  height: 147px;
+  width: 100%;
+  padding-bottom: 64px;
+}
+
+.trips_display .title2 {
+  height: 147px;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 64px;
+}
+
+.trips_display h2 {
+  text-align: center;
+  color: var(--dark-blue-color);
+  font-size: var(--font-size-h2);
+  font-weight: 500;
+}
+
+.card-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 24px;
+  row-gap: 30px;
+  padding: 0 var(--padding-l);
+}
+
+.card {
+  box-sizing: border-box;
+  width: calc(33.3% - 24px);
+  height: auto;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card .image {
+  height: auto;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  overflow: hidden;
+  border: none;
+}
+
+.card img {
+  border: none;
+  height: auto;
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+/*
+.card img:hover {
+  scale: 1.1;
+}*/
+
+.card .box {
+  position: absolute;
+  width: 160px;
+  height: 48px;
+  background-color: white;
+  top: 0;
+  right: 0;
+  border-radius: 0 20px 0 20px;
+}
+
+.description {
+  padding: 16px;
+  color: var(--dark-blue-color);
+}
+
+.country {
+  font-size: var(--font-size-s);
+  color: var(--light-blue-color);
+}
+
+.packName {
+  font-size: 24px;
+}
+
+.description div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.days {
+  font-size: var(--font-size-s);
+}
+
+.price {
+  font-size: var(--font-size-l);
+}
+
+/*media queries card container*/
+
+@media (max-width: 1300px) {
+  .card {
+    width: calc(50% - 24px);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(100% - 24px);
+  }
+}
+
+.slideshow-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 1s ease-in-out; /* Smooth transition for fade effect */
+  position: absolute; /* Stack all slides on top of each other */
+  width: 100%; /* Ensure slides take the full width */
+  height: auto; /* Keep the aspect ratio of images */
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.mySlides.show {
+  opacity: 1; /* Make the active slide visible */
+  position: relative; /* Ensure the visible slide is on top */
+  z-index: 1; /* Ensure the active slide is on top of others */
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  user-select: none;
+  color: white;
+  z-index: 2; /* Keep buttons above the slides */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/*PRODUCT PAGE*/
+
+#slider-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  height: 600px;
+}
+
+#slider-container .mySlides {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+#slider-container .mySlides img {
+  width: 100%;
+  display: block;
+  border-radius: 30px;
+  height: 600px;
+}
+
+#slider-container button {
+  background-color: var(--background-color);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#slider-container button:hover {
+  opacity: 1;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.pp-text {
+  padding-top: 64px;
+  padding-left: 162px;
+  padding-right: 162px;
+}
+
+.pp-text h2 {
+  font-size: var(--font-size-h2);
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.pp-text h4 {
+  font-size: var(--font-size-h4);
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.travel-details {
+  padding: 64px 48px;
+  height: 100px;
+}
+
+.travel-details-container {
+  padding: 15px 16px;
+  background-color: var(--light-grey-color);
+  border-radius: 30px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.travel-details-list {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.travel-details-list li {
+  display: flex;
+  align-items: flex-end;
+  width: 186px;
+}
+
+.travel-details-list li img {
+  margin-right: 10px;
+}
+
+.attribute p:first-of-type {
+  font-size: var(--font-size-s);
+  color: var(--light-blue-color);
+  cursor: pointer;
+}
+
+.attribute p:nth-of-type(2) {
+  font-size: var(--font-size-m);
+  color: var(--dark-blue-color);
+  cursor: pointer;
+}
+
+.trip-summary {
+  display: flex;
+}
+
+.trip-description {
+  box-sizing: border-box;
+  width: 66.6%;
+  padding: 120px 90px 0 162px;
+}
+
+.trip-description h3 {
+  font-size: var(--font-size-h3);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: var(--dark-blue-color);
+}
+
+.trip-description p {
+  font-size: var(--font-size-l);
+  font-family: "Poppins", sans-serif;
+  color: var(--dark-blue-color);
+  font-weight: 400;
+}
+
+.price {
+  box-sizing: border-box;
+  width: 33.3%;
+  padding: 64px 162px 0 16px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.price .summary {
+  box-sizing: border-box;
+  height: 332px;
+  width: 318px;
+  padding: 24px 16px 40px 16px;
+  background-color: var(--light-grey-color);
+  border-radius: 20px;
+}
+
+.price .summary h4:first-of-type {
+  font-size: var(--font-size-h4);
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.price .summary p {
+  font-size: var(--font-size-m);
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 16px;
+}
+
+.price .summary h4:nth-of-type(2) {
+  font-size: var(--font-size-h4);
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+.price .summary button {
+  box-sizing: border-box;
+  width: 286px;
+  height: 48px;
+  padding: 8px 10px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: var(--yellow-color);
+  font-size: var(--font-size-l);
+  color: var(--background-color);
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.price .summary button:hover {
+  opacity: 0.8;
+}
+
+/* CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE */
+
+#checkoutform-aside-summary-box {
+  border-radius: 10px;
+  padding: var(--padding-m);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#checkoutform-aside-summary-box .side-summary {
+  background-color: transparent;
+}
+
+#checkoutform-aside-summary-box h5 {
+  font-weight: bold;
+  color: #002247;
+  margin-bottom: var(--padding-s);
+}
+
+#checkoutform-aside-summary-box ul {
+  margin-bottom: var(--padding-s);
+}
+
+.btn-outline-primary {
+  background-color: var(--yellow-color);
+  color: var(--off-white-color);
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+}
+
+.btn-outline-primary:hover {
+  background-color: rgb(255, 136, 0);
+  color: var(--dark-blue-color);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--yellow-color);
+}
