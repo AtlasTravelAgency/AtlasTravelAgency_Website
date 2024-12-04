@@ -97,13 +97,25 @@ nav {
   text-decoration: none;
   color: var(--dark-blue-color);
   font-size: var(--font-size-m);
-  transition: all 0.1s; /*não gosto do efeito*/
+  position: relative;
 }
 
-.nav-links a:hover {
-  color: var(--dark-blue-color);
-  font-weight: bolder;
-  text-decoration: none;
+.nav-links a::after {
+  background: none repeat scroll 0 0 var(--dark-blue-color);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: var(--dark-blue-color);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-links a::after:hover {
+  width: 100%;
+  left: 0;
 }
 
 .nav-container {
@@ -121,8 +133,8 @@ nav {
 }
 
 #navIcon {
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
   padding: 8px;
   cursor: pointer;
 }
@@ -678,6 +690,7 @@ footer {
 
 .footer li {
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .newsletter p {
@@ -712,6 +725,12 @@ footer {
   border-radius: 20px;
   border: none;
   background-color: var(--light-blue-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  opacity: 0.8;
 }
 
 /*PRODUCT PAGE*/
