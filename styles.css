@@ -464,6 +464,16 @@ nav .hamburger {
   font-size: var(--font-size-l);
 }
 
+.category {
+  position: absolute;
+  top: 10px;
+  right: 38px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: var(--dark-blue-color);
+  font-weight: 400;
+}
+
 /*media queries card container*/
 
 @media (max-width: 1300px) {
@@ -528,45 +538,71 @@ nav .hamburger {
 
 /*chat*/
 
-.chat{
-padding: 160px 48px 120px 48px;
+.chat {
+  padding: 160px 48px 120px 48px;
 }
 
-.chat h3{
-font-size: var(--font-size-h3);
-font-family: "Poppins", sans-serif;
-font-weight: 500;
-color: var(--dark-blue-color);
-text-align: center;
-margin-bottom: 64px;
+.chat h3 {
+  font-size: var(--font-size-h3);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: var(--dark-blue-color);
+  text-align: center;
+  margin-bottom: 64px;
 }
 
-.chat div{
+.chat div {
   display: flex;
   justify-content: space-between;
 }
 
-.chat-cards{
-  height: 240px;
+.chat-cards {
+  position: relative; /* Ensure the parent container is positioned */
   width: 318px;
-  border-radius: 20px;
+  height: 240px;
+}
+
+.chat-cards img {
+  display: block; /* Ensures the image is treated as a block element */
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Position relative to the .chat-cards container */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset by half its own dimensions */
+  width: 100%;
 }
 
-.two, .three{
-  position: relative;
+.text p:first-of-type {
+  font-size: var(--font-size-h4);
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
-
-.two p{
-  position: absolute;
-  top: 50%;           /* Move down to 50% of the container's height */
-  left: 50%; 
+.text p:nth-of-type(2) {
+  font-size: var(--font-size-l);
+  color: var(--dark-blue-color);
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  text-align: center;
 }
 
-
-
+.text p img {
+  width: 37px;
+  height: 37px;
+  margin-right: 10px;
+}
 
 /*footer*/
 
@@ -578,27 +614,24 @@ footer {
   color: var(--background-color);
 }
 
-.superior{
+.superior {
   display: flex;
 }
 
-.inferior{
+.inferior {
   display: flex;
   justify-content: space-between;
   margin-top: 64px;
-
 }
 
-.inferior p{
+.inferior p {
   font-size: 14px;
 }
 
-.inferior a{
-  text-decoration: underline ;
+.inferior a {
+  text-decoration: underline;
   color: var(--background-color);
 }
-
-
 
 .footer-container-left {
   display: flex;
@@ -606,7 +639,7 @@ footer {
   margin-right: auto;
 }
 
-.footer-container-left .footerLogo{
+.footer-container-left .footerLogo {
   height: 60px;
   width: auto;
   padding-top: 64px;
@@ -632,7 +665,6 @@ footer {
   width: 160px;
 }
 
-
 .footer p:first-of-type {
   font-size: var(--font-size-l);
   margin-bottom: 24px;
@@ -644,24 +676,21 @@ footer {
   padding-left: 0;
 }
 
-
-.footer li{
+.footer li {
   margin-bottom: 16px;
 }
 
-.newsletter p{
-font-size: var(--font-size-l);
-font-family: "Poppins", sans-serif;
-margin-bottom: 24px;
+.newsletter p {
+  font-size: var(--font-size-l);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 24px;
 }
 
-
-.newsletter div{
+.newsletter div {
   display: flex;
-
 }
 
-.newsletter input{
+.newsletter input {
   box-sizing: border-box;
   margin-right: 24px;
   width: 348px;
@@ -672,27 +701,18 @@ margin-bottom: 24px;
   border: none;
 }
 
-.newsletter input::placeholder{
+.newsletter input::placeholder {
   font-size: var(--font-size-m);
   color: var(--grey-color);
 }
 
-
-.newsletter button{
+.newsletter button {
   width: 60px;
   height: 60px;
   border-radius: 20px;
   border: none;
   background-color: var(--light-blue-color);
 }
-
-
-
-
-
-
-
-
 
 /*PRODUCT PAGE*/
 
@@ -790,7 +810,6 @@ margin-bottom: 24px;
   width: 186px;
 }
 
-
 /* CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE */
 
 #entire-checkout-page {
@@ -803,7 +822,6 @@ margin-bottom: 24px;
   font-weight: 600; /* Semibold weight */
   font-style: normal;
 }
-
 
 #summary-pic {
   border-radius: 10px;
@@ -819,25 +837,22 @@ margin-bottom: 24px;
   padding: var(--padding-m);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-height: 1000px;
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 
 #checkoutform-aside-summary-box h4,
 #entire-checkout-page .col-lg-8 h4 {
-    margin-top: 0; /* Ensure no additional margin on top */
-    padding-top: 20px; /* Add equal padding for both headings */
+  margin-top: 0; /* Ensure no additional margin on top */
+  padding-top: 20px; /* Add equal padding for both headings */
 }
-
 
 #checkoutform-aside-summary-box h4 {
   margin-bottom: var(--padding-s);
 }
 
-
 #checkoutform-aside-summary-box ul {
   margin-bottom: var(--padding-s);
 }
-
 
 /* BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS */
 
@@ -845,7 +860,7 @@ margin-bottom: 24px;
   font-weight: 600;
   background-color: var(--yellow-color);
   color: var(--dark-blue-color);
-  border: 1px solid var(--yellow-color); 
+  border: 1px solid var(--yellow-color);
   border-radius: 10px;
   padding: 0.8rem 1.5rem;
   transition: background-color 0.3s, color 0.3s;
@@ -857,12 +872,11 @@ margin-bottom: 24px;
   border: 1px solid orange;
 }
 
-
 .btn-outline-dark {
   font-weight: 600;
 }
 
 .btn-outline-dark:hover {
   background-color: var(--yellow-color);
-  border: 1px solid var(--yellow-color);  
+  border: 1px solid var(--yellow-color);
 }
