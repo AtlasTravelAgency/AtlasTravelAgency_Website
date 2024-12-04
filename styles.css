@@ -526,48 +526,173 @@ nav .hamburger {
   right: 10px;
 }
 
+/*chat*/
+
+.chat{
+padding: 160px 48px 120px 48px;
+}
+
+.chat h3{
+font-size: var(--font-size-h3);
+font-family: "Poppins", sans-serif;
+font-weight: 500;
+color: var(--dark-blue-color);
+text-align: center;
+margin-bottom: 64px;
+}
+
+.chat div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-cards{
+  height: 240px;
+  width: 318px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.two, .three{
+  position: relative;
+}
+
+
+.two p{
+  position: absolute;
+  top: 50%;           /* Move down to 50% of the container's height */
+  left: 50%; 
+}
+
+
+
+
 /*footer*/
 
 footer {
-  display: flex;
-  align-items: center;
   max-width: 1600px;
   background-color: var(--dark-blue-color);
   padding: 48px 64px 0 64px;
-  height: 30vh;
+  height: 357px;
+  color: var(--background-color);
 }
+
+.superior{
+  display: flex;
+}
+
+.inferior{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+
+}
+
+.inferior p{
+  font-size: 14px;
+}
+
+.inferior a{
+  text-decoration: underline ;
+  color: var(--background-color);
+}
+
+
 
 .footer-container-left {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-right: 24px;
+  margin-right: auto;
+}
+
+.footer-container-left .footerLogo{
+  height: 60px;
+  width: auto;
+  padding-top: 64px;
 }
 
 .footer-links {
   display: flex;
+  margin-right: auto;
 }
 
 .company {
   margin-right: 24px;
+  width: 160px;
 }
 
 .legal {
   margin-right: 24px;
+  width: 160px;
 }
 
 .follow {
   margin-right: 24px;
+  width: 160px;
 }
+
 
 .footer p:first-of-type {
   font-size: var(--font-size-l);
+  margin-bottom: 24px;
   margin-bottom: 24px;
 }
 
 .footer ul:first-of-type {
   list-style: none;
+  padding-left: 0;
 }
+
+
+.footer li{
+  margin-bottom: 16px;
+}
+
+.newsletter p{
+font-size: var(--font-size-l);
+font-family: "Poppins", sans-serif;
+margin-bottom: 24px;
+}
+
+
+.newsletter div{
+  display: flex;
+
+}
+
+.newsletter input{
+  box-sizing: border-box;
+  margin-right: 24px;
+  width: 348px;
+  height: 60px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  background-color: var(--background-color);
+  border: none;
+}
+
+.newsletter input::placeholder{
+  font-size: var(--font-size-m);
+  color: var(--grey-color);
+}
+
+
+.newsletter button{
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--light-blue-color);
+}
+
+
+
+
+
+
+
+
 
 /*PRODUCT PAGE*/
 
