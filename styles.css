@@ -31,12 +31,16 @@ html {
 }
 
 body {
-  margin: 0 auto;
-  max-width: 1600px;
+  padding: 0 auto;
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color);
   box-sizing: border-box;
   position: relative;
+}
+
+main{
+  margin: 0 auto;
+  max-width: 1600px;
 }
 
 /*navbar*/
@@ -98,24 +102,12 @@ nav {
   color: var(--dark-blue-color);
   font-size: var(--font-size-m);
   position: relative;
+  transition: all 0.2s ease;
+  font-weight: 500;
 }
 
-.nav-links a::after {
-  background: none repeat scroll 0 0 var(--dark-blue-color);
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: var(--dark-blue-color);
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-
-.nav-links a::after:hover {
-  width: 100%;
-  left: 0;
+.nav-links a:hover{
+  color: var(--light-blue-color);
 }
 
 .nav-container {
@@ -135,7 +127,7 @@ nav {
 #navIcon {
   width: 44px;
   height: 44px;
-  padding: 8px;
+  padding: 8px 8px 8px 113px;
   cursor: pointer;
 }
 
@@ -301,8 +293,9 @@ nav .hamburger {
 }
 
 .hero-searchBar img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
 }
 
 .hero-searchBar li button {
@@ -509,7 +502,7 @@ nav .hamburger {
 
 .mySlides {
   opacity: 0; /* Start fully transparent */
-  transition: opacity 1s ease-in-out; /* Smooth transition for fade effect */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for fade effect */
   position: absolute; /* Stack all slides on top of each other */
   width: 100%; /* Ensure slides take the full width */
   height: auto; /* Keep the aspect ratio of images */
@@ -529,23 +522,61 @@ nav .hamburger {
 
 .prev,
 .next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 18px;
+  height: 30px;
+  width: 30px;
   font-weight: bold;
   user-select: none;
   color: white;
   z-index: 2; /* Keep buttons above the slides */
 }
 
+.prev button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: var(--background-color);
+}
+
+.next button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: var(--background-color);
+}
+
+
+.prev, .next:hover{
+  background-color: var(--dark-blue-color);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+
+
 .prev {
-  left: 10px;
+  left: 15px;
 }
 
 .next {
-  right: 10px;
+  right: 15px;
 }
 
 /*chat*/
@@ -618,7 +649,13 @@ nav .hamburger {
 
 /*footer*/
 
+.background-footer{
+  width: 100vw;
+  background-color: var(--dark-blue-color);
+}
+
 footer {
+  box-sizing: border-box;
   max-width: 1600px;
   background-color: var(--dark-blue-color);
   padding: 48px 64px 0 64px;
