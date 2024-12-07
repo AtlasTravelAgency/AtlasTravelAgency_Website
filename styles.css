@@ -1063,7 +1063,7 @@ footer {
 
 /*PRODUCT PAGE*/
 
-.slider-container {
+#slider-container {
   position: relative;
   max-width: 100%;
   margin: auto;
@@ -1071,21 +1071,34 @@ footer {
   height: 600px;
 }
 
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
+#slider-container .mySlides {
   min-width: 100%;
   box-sizing: border-box;
 }
 
-.slide img {
+#slider-container .mySlides img {
   width: 100%;
   display: block;
   border-radius: 30px;
   height: 600px;
+}
+
+#slider-container button {
+  background-color: var(--background-color);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#slider-container button:hover {
+  opacity: 1;
 }
 
 .dots {
@@ -1153,9 +1166,207 @@ footer {
 
 .travel-details-list li {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   width: 186px;
 }
+
+.travel-details-list li img {
+  margin-right: 10px;
+}
+
+.attribute p:first-of-type {
+  font-size: var(--font-size-s);
+  color: var(--light-blue-color);
+  cursor: pointer;
+}
+
+.attribute p:nth-of-type(2) {
+  font-size: var(--font-size-m);
+  color: var(--dark-blue-color);
+  cursor: pointer;
+}
+
+.trip-summary {
+  display: flex;
+}
+
+.trip {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.trip-summary {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 90px 0 162px;
+}
+
+.trip-description h3 {
+  font-size: var(--font-size-h3);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: var(--dark-blue-color);
+}
+
+.trip-description p {
+  font-size: var(--font-size-l);
+  font-family: "Poppins", sans-serif;
+  color: var(--dark-blue-color);
+  font-weight: 400;
+}
+
+.trip-highlights {
+  padding-top: 120px;
+}
+
+.trip-highlights h3 {
+  font-size: var(--font-size-h3);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: var(--dark-blue-color);
+}
+
+.trip-highlights ul {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 0;
+  list-style-position: inside;
+  list-style: none;
+}
+
+.trip-highlights ul li {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-m);
+}
+
+.trip-highlights ul li span {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #85bac8;
+  margin-right: 16px;
+  font-size: var(--font-size-s);
+}
+
+/*trip itinerary*/
+.trip-itinerary {
+  padding-top: 120px;
+}
+
+.trip-itinerary h3 {
+  font-size: var(--font-size-h3);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: var(--dark-blue-color);
+}
+
+.trip-itinerary ul {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 0;
+  list-style-position: inside;
+  list-style: none;
+}
+
+.trip-itinerary ul li {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-m);
+}
+
+.trip-itinerary ul li span {
+  height: 18px;
+  width: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--dark-blue-color);
+  margin-right: 24px;
+  font-size: var(--font-size-s);
+}
+
+.price {
+  box-sizing: border-box;
+  width: 33.3%;
+  padding: 64px 162px 0 16px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.price .summary {
+  box-sizing: border-box;
+  height: 332px;
+  width: 318px;
+  padding: 24px 16px 40px 16px;
+  background-color: var(--light-grey-color);
+  border-radius: 20px;
+}
+
+.price .summary h4:first-of-type {
+  font-size: var(--font-size-h4);
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.price .summary p {
+  font-size: var(--font-size-m);
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 16px;
+}
+
+.price .summary h4:nth-of-type(2) {
+  font-size: var(--font-size-h4);
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+.price .summary button {
+  box-sizing: border-box;
+  width: 286px;
+  height: 48px;
+  padding: 8px 10px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: var(--yellow-color);
+  font-size: var(--font-size-l);
+  color: var(--background-color);
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.price .summary button:hover {
+  opacity: 0.8;
+}
+
 
 /* CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE */
 
