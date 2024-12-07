@@ -22,9 +22,7 @@
   --font-family: "Poppins", sans-serif;
 }
 
-
 /*1024px, 768px, e garantir que todo o conteúdo cabe em 360px*/
-
 
 /*general structure*/
 * {
@@ -36,15 +34,16 @@ html {
 }
 
 body {
-  padding: 0 auto;
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color);
   box-sizing: border-box;
   position: relative;
+  width: 100vw;
 }
 
-main{
+main {
   margin: 0 auto;
+  width: 100vw;
   max-width: 1600px;
 }
 
@@ -55,13 +54,10 @@ nav {
   justify-content: space-between;
   padding: var(--padding-m) var(--padding-l) var(--padding-l) var(--padding-l);
   font-family: "Poppins", sans-serif;
-  /*position: sticky;*/
-  top: 0;
-  z-index: 1000;
   background-color: var(--background-color);
-  max-height: 138px;
+  height: 138px;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
 }
 
 .nav-container-left {
@@ -79,7 +75,6 @@ nav {
   width: 93px;
   height: 48px;
 }
-
 
 .nav-links {
   display: flex;
@@ -99,7 +94,7 @@ nav {
   font-weight: 500;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
   color: var(--light-blue-color);
 }
 
@@ -241,8 +236,10 @@ nav .hamburger {
 /* hero section */
 
 .hero {
+  box-sizing: border-box;
   padding: 0 24px;
   height: 530px;
+  width: 100%;
   max-width: 1600px;
 }
 
@@ -353,22 +350,94 @@ nav .hamburger {
   margin-bottom: 10px;
 }
 
-@media (max-width: 1024px) {
+#searchIcon {
+  display: none;
+}
 
-  .hero-searchBar{
-width: 640px;
+@media (max-width: 1064px) {
+  .hero-searchBar {
+    width: 640px;
   }
 
-  .hero-searchBar li input[type="text"]{
+  .hero-searchBar li input[type="text"] {
     padding: 12px 16px 12px 10px;
+  }
+
+  .hero-message h1 {
+    font-size: var(--font-size-h2);
+  }
+
+  .hero-message p {
+    font-size: var(--font-size-m);
   }
 }
 
+@media (max-width: 914px) {
+  .hero-message h1 {
+    font-size: var(--font-size-h3);
+  }
 
-@media (max-width: 1024px) {
+  .hero-message p {
+    font-size: var(--font-size-s);
+  }
+}
 
+@media (max-width: 768px) {
+  .hero-searchBar {
+    width: 312px;
+  }
+  .hero-searchBar input {
+    display: none;
+  }
 
+  #searchButton {
+    display: none;
+  }
 
+  #searchIcon {
+    display: flex;
+    height: 60px;
+    width: 60px;
+  }
+
+  #searchIcon button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #searchIcon img {
+    width: auto;
+    height: auto;
+  }
+
+  .hero {
+    height: 450px;
+  }
+
+  .hero-image {
+    height: 80%;
+  }
+
+  .hero-message {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .hero-message h1 {
+    font-size: 40px;
+    width: 100%;
+  }
+
+  .hero-message p {
+    display: flex;
+    justify-content: flex-end;
+    font-size: var(--font-size-m);
+    margin-top: 48px;
+    width: 100%;
+    text-align: right;
+  }
+}
 /*Featured Trips Section*/
 
 .trips_display {
@@ -490,18 +559,6 @@ width: 640px;
 
 /*media queries card container*/
 
-@media (max-width: 1300px) {
-  .card {
-    width: calc(50% - 24px);
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: calc(100% - 24px);
-  }
-}
-
 .slideshow-container {
   display: flex;
   width: 100%;
@@ -547,7 +604,7 @@ width: 640px;
   z-index: 2; /* Keep buttons above the slides */
 }
 
-.prev button{
+.prev button {
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -561,7 +618,7 @@ width: 640px;
   padding: 0;
 }
 
-.next button{
+.next button {
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -575,26 +632,25 @@ width: 640px;
   padding: 0;
 }
 
-.prev:hover{
-  background-color: var(--background-color);
-  border-radius: 50%;
-  opacity: 0.8
-}
-
-.next:hover{
+.prev:hover {
   background-color: var(--background-color);
   border-radius: 50%;
   opacity: 0.8;
 }
 
-.prev button:hover{
+.next:hover {
+  background-color: var(--background-color);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.prev button:hover {
   color: var(--dark-blue-color);
 }
 
-.next button:hover{
+.next button:hover {
   color: var(--dark-blue-color);
 }
-
 
 .prev {
   left: 15px;
@@ -602,6 +658,99 @@ width: 640px;
 
 .next {
   right: 15px;
+}
+
+@media (max-width: 1300px) {
+  .card {
+    width: calc(50% - 24px);
+  }
+
+  .category {
+    top: 15px;
+    right: 60px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .category {
+    top: 10px;
+    right: 40px;
+  }
+}
+
+@media (max-width: 890px) {
+  .category {
+    top: 5px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(100% - 24px);
+  }
+
+  .category {
+    top: 15px;
+    right: 60px;
+  }
+
+  .trips_display h2 {
+    text-align: center;
+    color: var(--dark-blue-color);
+    font-size: var(--font-size-h3);
+    font-weight: 500;
+  }
+  .card-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .category {
+    top: 10px;
+    right: 40px;
+  }
+}
+
+@media (max-width: 485px) {
+  .category {
+    top: 5px;
+    right: 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .category {
+    font-size: 14px;
+    top: 5px;
+    right: 15px;
+  }
+
+  .trips_display .title {
+    padding-bottom: 36px;
+  }
+  .trips_display .title2 {
+    padding-bottom: 48px;
+    padding-top: 80px;
+  }
+
+  .trips_display h2 {
+    font-size: var(--font-size-h4);
+  }
+
+  .card-container {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@media (max-width: 360px) {
+  .category {
+    font-size: 14px;
+    top: 2px;
+    right: 10px;
+  }
 }
 
 /*chat*/
@@ -672,9 +821,28 @@ width: 640px;
   margin-right: 10px;
 }
 
+@media (max-width: 1400px) {
+  .chat .mobile {
+    display: none;
+  }
+
+  .chat div {
+    justify-content: center;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 710px) {
+  .chat div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /*footer*/
 
-.background-footer{
+.background-footer {
   width: 100vw;
   background-color: var(--dark-blue-color);
 }
@@ -684,18 +852,20 @@ footer {
   max-width: 1600px;
   background-color: var(--dark-blue-color);
   padding: 48px 64px 0 64px;
-  height: 357px;
+  height: auto;
   color: var(--background-color);
 }
 
 .superior {
   display: flex;
+  justify-content: space-between;
 }
 
 .inferior {
   display: flex;
   justify-content: space-between;
   margin-top: 64px;
+  padding-bottom: 36px;
 }
 
 .inferior p {
@@ -710,7 +880,6 @@ footer {
 .footer-container-left {
   display: flex;
   flex-direction: row;
-  margin-right: auto;
 }
 
 .footer-container-left .footerLogo {
@@ -721,22 +890,22 @@ footer {
 
 .footer-links {
   display: flex;
-  margin-right: auto;
+  justify-content: space-around;
+  width: 660px;
 }
 
 .company {
-  margin-right: 24px;
-  width: 160px;
+  width: auto;
+  max-width: 160px;
 }
 
 .legal {
-  margin-right: 24px;
-  width: 160px;
+  width: auto;
+  max-width: 160px;
 }
 
 .follow {
-  margin-right: 24px;
-  width: 160px;
+  max-width: 160px;
 }
 
 .footer p:first-of-type {
@@ -768,7 +937,8 @@ footer {
 .newsletter input {
   box-sizing: border-box;
   margin-right: 24px;
-  width: 348px;
+  width: auto;
+  max-width: 348px;
   height: 60px;
   padding: 10px 24px;
   border-radius: 20px;
@@ -793,6 +963,93 @@ footer {
 
 .newsletter button:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 1250px) {
+  footer {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-container-left {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+  .footer-links {
+    margin: 0 auto;
+  }
+
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .newsletter div {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .newsletter p {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .newsletter input {
+    margin-right: 16px;
+    width: 60%;
+  }
+
+  .superior {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1075px) {
+  .inferior {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .footer-links {
+    width: auto;
+    margin: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer-links {
+    flex-wrap: wrap;
+  }
+  .newsletter div {
+    width: 100%;
+  }
+
+  .newsletter input {
+    width: 70%;
+  }
+}
+
+@media (max-width: 410px) {
+  .newsletter p {
+    font-size: var(--font-size-m);
+  }
 }
 
 /*PRODUCT PAGE*/
