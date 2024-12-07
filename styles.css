@@ -385,6 +385,8 @@ nav .hamburger {
 @media (max-width: 768px) {
   .hero-searchBar {
     width: 312px;
+    height: 76px;
+    padding-right: 8px;
   }
   .hero-searchBar input {
     display: none;
@@ -472,7 +474,7 @@ nav .hamburger {
   flex-wrap: wrap;
   width: 100%;
   gap: 24px;
-  row-gap: 30px;
+  row-gap: 120px;
   padding: 0 var(--padding-l);
 }
 
@@ -503,10 +505,10 @@ nav .hamburger {
   transition: all 0.2s;
 }
 
-/*
-.card img:hover {
-  scale: 1.1;
-}*/
+
+.card-img-hover:hover {
+  scale: 1.03;
+}
 
 .card .box {
   position: absolute;
@@ -703,6 +705,7 @@ nav .hamburger {
   }
   .card-container {
     justify-content: center;
+    row-gap: 40px;
   }
 }
 
@@ -891,21 +894,24 @@ footer {
 .footer-links {
   display: flex;
   justify-content: space-around;
-  width: 660px;
+  width: auto;
 }
 
 .company {
   width: auto;
   max-width: 160px;
+  padding-right: 48px;
 }
 
 .legal {
   width: auto;
   max-width: 160px;
+  padding-right: 48px;
 }
 
 .follow {
   max-width: 160px;
+  padding-right: 48px;
 }
 
 .footer p:first-of-type {
@@ -974,10 +980,12 @@ footer {
   .footer-container-left {
     display: flex;
     justify-content: center;
-    margin-bottom: 48px;
+    margin-bottom: 64px;
   }
   .footer-links {
     margin: 0 auto;
+    gap: 24px;
+    justify-content: flex-start;
   }
 
   .newsletter {
@@ -1002,6 +1010,7 @@ footer {
 
   .newsletter input {
     margin-right: 16px;
+    margin-bottom: 16px;
     width: 60%;
   }
 
