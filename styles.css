@@ -961,8 +961,17 @@ footer {
 .map-container {
   width: calc(100% - 96px);
   margin: 0 auto;
-  padding: 0 48px; /* Optional: Adds space around the map */
+  padding: 0 48px;
   display: block;
+  margin-top: 48px;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 768px) { 
+  .map-container {
+    width: calc(100% - 48px);
+    padding: 0 24px;
+  }
 }
 
 #oceania:hover > * {
@@ -974,6 +983,11 @@ footer {
 #south-asia:hover > * {
   fill: #85BAC8 !important;
   transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+#south-asia > * {
+  fill: #85BAC8 !important;
   cursor: pointer;
 }
 
@@ -1011,4 +1025,21 @@ footer {
   fill: #85BAC8 !important;
   transition: fill 0.3s ease;
   cursor: pointer;
+}
+
+/*button show more*/ 
+.show-more {
+  font-family: "poppins", sans-serif;
+  font: weight 100;
+  color: var(--dark-blue-color);
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 40px;
+  margin-bottom: 120px;
+}
+
+.show-more:hover {
+  color: #18839F;
 }
