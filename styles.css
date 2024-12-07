@@ -954,3 +954,61 @@ footer {
   background-color: var(--yellow-color);
   border: 1px solid var(--yellow-color);
 }
+
+
+/*destinations map*/
+
+.map-container {
+  width: calc(100% - 96px);
+  margin: 0 auto;
+  padding: 0 48px; /* Optional: Adds space around the map */
+  display: block;
+}
+
+#oceania:hover > * {
+  fill: #85BAC8 !important;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+#south-asia:hover > * {
+  fill: #85BAC8 !important;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+#north-asia:hover > * {
+  fill: #85BAC8 !important;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+#africa:hover > * {
+  fill: #85BAC8 !important;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+#europe:hover > * {
+  fill: #85BAC8 !important;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+#middle-east:hover > * {
+  fill: #85BAC8 !important;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+#south-america:hover > * {
+  fill: #85BAC8 !important;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+#north-america:hover > * {
+  fill: #85BAC8 !important;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
