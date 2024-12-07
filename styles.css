@@ -505,7 +505,6 @@ nav .hamburger {
   transition: all 0.2s;
 }
 
-
 .card-img-hover:hover {
   scale: 1.03;
 }
@@ -1065,10 +1064,10 @@ footer {
 
 #slider-container {
   position: relative;
-  max-width: 100%;
   margin: auto;
   overflow: hidden;
-  height: 600px;
+  height: auto;
+  width: 95%;
 }
 
 #slider-container .mySlides {
@@ -1077,10 +1076,12 @@ footer {
 }
 
 #slider-container .mySlides img {
+  height: auto;
   width: 100%;
-  display: block;
-  border-radius: 30px;
-  height: 600px;
+  border-radius: 20px;
+  object-fit: cover;
+  overflow: hidden;
+  border: none;
 }
 
 #slider-container button {
@@ -1155,6 +1156,72 @@ footer {
   align-items: center;
 }
 
+.travel-details1250 {
+  padding: 64px 48px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.travel-details-container1250 {
+  box-sizing: border-box;
+  width: 637px;
+  padding: 16px;
+  height: 148px;
+  background-color: var(--light-grey-color);
+  border-radius: 20px;
+}
+
+.travel-details-container1250 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50px;
+}
+
+.travel-details-container1250 div li {
+  display: flex;
+  align-items: center;
+}
+
+.travel-details-container1250 div:first-of-type {
+  margin-bottom: 16px;
+}
+
+.travel-details768 {
+  padding: 64px 48px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.travel-details-container768 {
+  box-sizing: border-box;
+  width: 404px;
+  padding: 24px 16px;
+  height: auto;
+  background-color: var(--light-grey-color);
+  border-radius: 20px;
+}
+
+.travel-details-container768 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.travel-details-container768 ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.travel-details-container768 ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
 .travel-details-list {
   padding: 0;
   width: 100%;
@@ -1195,12 +1262,13 @@ footer {
   flex-direction: row;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 128px;
 }
 
 .trip-summary {
   display: flex;
   flex-direction: column;
-  padding: 120px 90px 0 162px;
+  padding: 80px 90px 0 162px;
 }
 
 .trip-description h3 {
@@ -1302,7 +1370,7 @@ footer {
 .price {
   box-sizing: border-box;
   width: 33.3%;
-  padding: 64px 162px 0 16px;
+  padding: 80px 162px 0 16px;
 }
 
 .summary {
@@ -1367,6 +1435,49 @@ footer {
   opacity: 0.8;
 }
 
+.travel-details1250 {
+  display: none;
+}
+
+.travel-details768 {
+  display: none;
+}
+
+@media (max-width: 1250px) {
+  .pp-text {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .pp-text h4 {
+    font-size: var(--font-size-l);
+  }
+  .travel-details {
+    display: none;
+  }
+
+  .travel-details1250 {
+    display: flex;
+  }
+
+  .trip-summary {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .trip-summary p {
+    font-size: var(--font-size-m);
+  }
+}
+
+@media (max-width: 768px) {
+  .travel-details1250 {
+    display: none;
+  }
+
+  .travel-details768 {
+    display: flex;
+  }
+}
 
 /* CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE */
 
