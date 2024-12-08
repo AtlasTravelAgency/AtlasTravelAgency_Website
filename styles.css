@@ -1670,7 +1670,9 @@ footer {
   }
 }
 
-/* TRAVEL STORIES PAGE */
+
+
+/* TRAVEL STORIES PAGE - TRAVEL STORIES PAGE - TRAVEL STORIES PAGE */
 
 .card-container {
   display: flex;
@@ -1721,7 +1723,6 @@ footer {
 }
 
 .travel-story-packName {
-  /* Responsive font sizing: Will not go smaller than 20px or larger than 32px */
   font-size: clamp(20px, 4vw, 32px);
   font-weight: 600;
 }
@@ -1750,7 +1751,7 @@ footer {
   font-weight: 600;
 }
 
-/* Media Query for Earlier Stacking */
+
 @media (max-width: 1024px) {
   .card-container {
     flex-direction: column;
@@ -1772,247 +1773,6 @@ footer {
 main {
   padding-bottom: 200px;
 }
-=======
-.attribute p:first-of-type {
-  font-size: var(--font-size-s);
-  color: var(--light-blue-color);
-  cursor: pointer;
-}
-
-.attribute p:nth-of-type(2) {
-  font-size: var(--font-size-m);
-  color: var(--dark-blue-color);
-  cursor: pointer;
-}
-
-.trip-summary {
-  display: flex;
-}
-
-.trip {
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 128px;
-}
-
-.trip-summary {
-  display: flex;
-  flex-direction: column;
-  padding: 80px 90px 0 162px;
-}
-
-.trip-description h3 {
-  font-size: var(--font-size-h3);
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  margin-bottom: 40px;
-  color: var(--dark-blue-color);
-}
-
-.trip-description p {
-  font-size: var(--font-size-l);
-  font-family: "Poppins", sans-serif;
-  color: var(--dark-blue-color);
-  font-weight: 400;
-}
-
-.trip-highlights {
-  padding-top: 120px;
-}
-
-.trip-highlights h3 {
-  font-size: var(--font-size-h3);
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  margin-bottom: 40px;
-  color: var(--dark-blue-color);
-}
-
-.trip-highlights ul {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding-left: 0;
-  list-style-position: inside;
-  list-style: none;
-}
-
-.trip-highlights ul li {
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  font-size: var(--font-size-m);
-}
-
-.trip-highlights ul li span {
-  height: 32px;
-  width: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #85bac8;
-  margin-right: 16px;
-  font-size: var(--font-size-s);
-}
-
-/*trip itinerary*/
-.trip-itinerary {
-  padding-top: 120px;
-}
-
-.trip-itinerary h3 {
-  font-size: var(--font-size-h3);
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  margin-bottom: 40px;
-  color: var(--dark-blue-color);
-}
-
-.trip-itinerary ul {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding-left: 0;
-  list-style-position: inside;
-  list-style: none;
-}
-
-.trip-itinerary ul li {
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  font-size: var(--font-size-m);
-}
-
-.trip-itinerary ul li span {
-  height: 18px;
-  width: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: var(--dark-blue-color);
-  margin-right: 24px;
-  font-size: var(--font-size-s);
-}
-
-.price {
-  box-sizing: border-box;
-  width: 33.3%;
-  padding: 80px 162px 0 16px;
-}
-
-.summary {
-  display: flex;
-  flex-direction: column;
-}
-
-.price .summary {
-  box-sizing: border-box;
-  height: 332px;
-  width: 318px;
-  padding: 24px 16px 40px 16px;
-  background-color: var(--light-grey-color);
-  border-radius: 20px;
-}
-
-.price .summary h4:first-of-type {
-  font-size: var(--font-size-h4);
-  color: var(--dark-blue-color);
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-
-.price .summary p {
-  font-size: var(--font-size-m);
-  color: var(--dark-blue-color);
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 16px;
-}
-
-.price .summary h4:nth-of-type(2) {
-  font-size: var(--font-size-h4);
-  color: var(--dark-blue-color);
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  margin-bottom: 40px;
-  text-align: right;
-}
-
-.price .summary button {
-  box-sizing: border-box;
-  width: 286px;
-  height: 48px;
-  padding: 8px 10px;
-  margin: 0 auto;
-  border-radius: 20px;
-  background-color: var(--yellow-color);
-  font-size: var(--font-size-l);
-  color: var(--background-color);
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.price .summary button:hover {
-  opacity: 0.8;
-}
-
-.travel-details1250 {
-  display: none;
-}
-
-.travel-details768 {
-  display: none;
-}
-
-@media (max-width: 1250px) {
-  .pp-text {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-
-  .pp-text h4 {
-    font-size: var(--font-size-l);
-  }
-  .travel-details {
-    display: none;
-  }
-
-  .travel-details1250 {
-    display: flex;
-  }
-
-  .trip-summary {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-  .trip-summary p {
-    font-size: var(--font-size-m);
-  }
-}
-
-@media (max-width: 768px) {
-  .travel-details1250 {
-    display: none;
-  }
-
-  .travel-details768 {
-    display: flex;
-  }
-}
-
-/* CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE */
->>>>>>> 97dab39133033e3be425bd79af5cdd905731b287
 
 #entire-checkout-page {
   color: var(--dark-blue-color);
@@ -2044,13 +1804,8 @@ main {
 
 #checkoutform-aside-summary-box h4,
 #entire-checkout-page .col-lg-8 h4 {
-<<<<<<< HEAD
   margin-top: 0;
   padding-top: 20px;
-=======
-  margin-top: 0; /* Ensure no additional margin on top */
-  padding-top: 20px; /* Add equal padding for both headings */
->>>>>>> 97dab39133033e3be425bd79af5cdd905731b287
 }
 
 #checkoutform-aside-summary-box h4 {
@@ -2061,7 +1816,6 @@ main {
   margin-bottom: var(--padding-s);
 }
 
-<<<<<<< HEAD
 #checkoutform-aside-summary-box h5.mb-3 {
   font-size: 28px;
   color: var(--light-blue-color);
@@ -2072,32 +1826,32 @@ main {
   font-style: oblique;
   text-transform: uppercase;
 }
-=======
-/* BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS */
->>>>>>> 97dab39133033e3be425bd79af5cdd905731b287
 
-/* BUTTONS */
-.btn-outline-primary {
-  font-weight: 600;
-  background-color: var(--yellow-color);
-  color: var(--dark-blue-color);
-  border: 1px solid var(--yellow-color);
-  border-radius: 10px;
-  padding: 0.8rem 1.5rem;
-  transition: background-color 0.3s, color 0.3s;
-}
+  /* CHECKOUT FORM BUTTONS */
+  .btn-outline-primary {
+    font-weight: 600;
+    background-color: var(--yellow-color);
+    color: var(--dark-blue-color);
+    border: 1px solid var(--yellow-color);
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
 
-.btn-outline-primary:hover {
-  background-color: orange;
-  color: white;
-  border: 1px solid orange;
-}
+  .btn-outline-primary:hover {
+    background-color: orange;
+    color: white;
+    border: 1px solid orange;
+  }
 
-.btn-outline-dark {
-  font-weight: 600;
-}
+  .btn-outline-dark {
+    font-weight: 600;
+  }
 
-.btn-outline-dark:hover {
-  background-color: var(--yellow-color);
-  border: 1px solid var(--yellow-color);
-}
+  .btn-outline-dark:hover {
+    background-color: var(--yellow-color);
+    border: 1px solid var(--yellow-color);
+  }
+
+
+  
