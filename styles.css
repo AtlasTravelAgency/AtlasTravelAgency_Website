@@ -139,7 +139,6 @@ nav .hamburger {
   padding-left: 48px;
   padding-right: 48px;
   position: absolute;
-
 }
 
 .show-menu {
@@ -215,8 +214,8 @@ nav .hamburger {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100vw;
   background-color: var(--background-color);
   z-index: 1000;
   flex-direction: column;
@@ -236,29 +235,28 @@ nav .hamburger {
 
 /* hero section */
 
-
-.header-message{
+.header-message {
   position: relative;
 }
 
-.header-message img{
+.header-message img {
   height: auto;
   max-width: 100%;
   padding-left: 48px;
   padding-right: 48px;
 }
 
-.pin{
+.pin {
   width: 33%;
 }
 
-.pin p{
+.pin p {
   font-size: var(--font-size-l);
   color: var(--dark-blue-color);
   padding-top: 120px;
 }
 
-.pin img{
+.pin img {
   padding: 0;
   height: 98px;
   width: 56px;
@@ -357,9 +355,8 @@ nav .hamburger {
   padding: 56px 48px 0 48px;
   width: 100%;
   top: 0;
+  box-sizing: border-box;
 }
-
-
 
 .hero-message h1 {
   width: 67%;
@@ -474,20 +471,18 @@ nav .hamburger {
     text-align: right;
   }
 
-.hero-message .pin{
-  box-sizing: border-box;
-  width: 100%;
-   display: flex;
+  .hero-message .pin {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
     flex-direction: column;
-}
+  }
 
-
-  .hero-message .pin p{
+  .hero-message .pin p {
     padding-top: 0;
     width: 100%;
-   
   }
-  .hero-message .pin img{
+  .hero-message .pin img {
     margin-left: auto;
   }
 }
@@ -1492,11 +1487,11 @@ footer {
   opacity: 0.8;
 }
 
-.price .summary button a{
+.price .summary button a {
   text-decoration: none;
 }
 
-.price .summary button a:visited{
+.price .summary button a:visited {
   color: var(--background-color);
 }
 
@@ -1603,7 +1598,7 @@ footer {
 }
 
 @media (max-width: 1150px) {
-  .price {
+  .trip .price {
     display: none;
   }
 
@@ -1733,31 +1728,26 @@ footer {
   }
 }
 
-
-
 /* TRAVEL STORIES PAGE - TRAVEL STORIES PAGE - TRAVEL STORIES PAGE */
 
-
-.travel_stories{
+.travel_stories {
   margin-bottom: 120px;
 }
 
-.travel_stories .description p{
+.travel_stories .description p {
   margin-bottom: 8px;
 }
 
-
-.travel_stories .travel-story-country{
+.travel_stories .travel-story-country {
   font-size: var(--font-size-s);
   color: var(--light-blue-color);
 }
 
-.travel_stories .travel-story-packName{
+.travel_stories .travel-story-packName {
   font-size: 32px;
   font-weight: 600;
   height: 96px;
 }
-
 
 /* CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE - CHECKOUT FORM  PAGE */
 
@@ -1773,10 +1763,10 @@ footer {
   width: 100%;
 }
 
-.nav-container-right img{
+.nav-container-right img {
   height: 60px;
   width: 165px;
-  padding: 8px 8px 8px 113px
+  padding: 8px 8px 8px 113px;
 }
 
 .checkoutMain {
@@ -1806,7 +1796,6 @@ footer {
   background-color: var(--light-grey-color);
   border-radius: 20px;
   padding: var(--padding-m);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-height: 1000px;
   overflow-y: auto;
 }
@@ -1815,7 +1804,6 @@ footer {
 #entire-checkout-page .col-lg-8 h4 {
   margin-top: 0;
   padding-top: 20px;
-
 }
 
 #checkoutform-aside-summary-box h4 {
@@ -1831,17 +1819,18 @@ footer {
   color: var(--light-blue-color);
 }
 
-#applybutton, #bookButton{
+#applyButton,
+#bookButton {
   background-color: var(--yellow-color);
   border: none;
   color: var(--background-color);
   transition: all 0.2s ease;
 }
 
-#applybutton:hover, #bookButton:hover{
+#applyButton:hover,
+#bookButton:hover {
   opacity: 0.8;
 }
-
 
 .going-header {
   color: var(--light-blue-color);
@@ -1849,49 +1838,45 @@ footer {
   padding-left: 16px;
 }
 
-
-
-.footer-container-left .img-fluid{
-width: 200px;
-height: 124px;
-padding-top: 64px;
+.footer-container-left .img-fluid {
+  width: 200px;
+  height: 124px;
+  padding-top: 64px;
 }
 
 @media (max-width: 1024px) {
-  .nav-container-right img{
+  .nav-container-right img {
     display: none;
   }
 }
 
+/* CHECKOUT FORM BUTTONS */
+.btn-outline-primary {
+  font-weight: 600;
+  background-color: var(--yellow-color);
+  color: var(--dark-blue-color);
+  border: 1px solid var(--yellow-color);
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-  /* CHECKOUT FORM BUTTONS */
-  .btn-outline-primary {
-    font-weight: 600;
-    background-color: var(--yellow-color);
-    color: var(--dark-blue-color);
-    border: 1px solid var(--yellow-color);
-    border-radius: 10px;
-    padding: 0.8rem 1.5rem;
-    transition: background-color 0.3s, color 0.3s;
-  }
+.btn-outline-primary:hover {
+  background-color: orange;
+  color: white;
+  border: 1px solid orange;
+}
 
-  .btn-outline-primary:hover {
-    background-color: orange;
-    color: white;
-    border: 1px solid orange;
-  }
+.btn-outline-dark {
+  font-weight: 600;
+}
 
-  .btn-outline-dark {
-    font-weight: 600;
-  }
+.btn-outline-dark:hover {
+  background-color: var(--yellow-color);
+  border: 1px solid var(--yellow-color);
+}
 
-  .btn-outline-dark:hover {
-    background-color: var(--yellow-color);
-    border: 1px solid var(--yellow-color);
-  }
-
-
-  /*destinations map*/
+/*destinations map*/
 
 .map-container {
   width: calc(100% - 96px);
@@ -1902,7 +1887,7 @@ padding-top: 64px;
   margin-bottom: 64px;
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .map-container {
     width: calc(100% - 48px);
     padding: 0 24px;
@@ -1910,59 +1895,59 @@ padding-top: 64px;
 }
 
 #oceania:hover > * {
-  fill: #85BAC8 !important;
+  fill: #85bac8 !important;
   transition: fill 0.3s ease;
   cursor: pointer;
 }
 
 #south-asia:hover > * {
-  fill: #85BAC8 !important;
+  fill: #85bac8 !important;
   transition: fill 0.3s ease;
   cursor: pointer;
 }
 
 #south-asia > * {
-  fill: #85BAC8 !important;
+  fill: #85bac8 !important;
   cursor: pointer;
 }
 
 #north-asia:hover > * {
-  fill: #85BAC8 !important;
+  fill: #85bac8 !important;
   transition: fill 0.3s ease;
   cursor: pointer;
 }
 
 #africa:hover > * {
-  fill: #85BAC8 !important;
+  fill: #85bac8 !important;
   transition: fill 0.3s ease;
   cursor: pointer;
 }
 
 #europe:hover > * {
-  fill: #85BAC8 !important;
+  fill: #85bac8 !important;
   transition: fill 0.3s ease;
   cursor: pointer;
 }
 
 #middle-east:hover > * {
-  fill: #85BAC8 !important;
+  fill: #85bac8 !important;
   transition: fill 0.3s ease;
   cursor: pointer;
 }
 
 #south-america:hover > * {
-  fill: #85BAC8 !important;
+  fill: #85bac8 !important;
   transition: fill 0.3s ease;
   cursor: pointer;
 }
 
 #north-america:hover > * {
-  fill: #85BAC8 !important;
+  fill: #85bac8 !important;
   transition: fill 0.3s ease;
   cursor: pointer;
 }
 
-/*button show more*/ 
+/*button show more*/
 .show-more {
   font-family: "poppins", sans-serif;
   font: weight 100;
@@ -1977,4 +1962,5 @@ padding-top: 64px;
 }
 
 .show-more:hover {
-  color: #18839F;
+  color: #18839f;
+}

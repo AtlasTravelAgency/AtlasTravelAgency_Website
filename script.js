@@ -66,7 +66,6 @@ function showSlides(n, slideshowIndex) {
   }
 }
 
-
 //PRODUCT PAGE CODE
 
 let currentIndex = 0;
@@ -104,4 +103,3 @@ function currentSlide(index) {
 
 // Initialize the slider
 showSlide(currentIndex);
-
