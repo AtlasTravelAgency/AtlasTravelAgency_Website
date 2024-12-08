@@ -19,10 +19,13 @@
     <main>
         <!-- NAV NAV NAV -->
         <nav>
-            <div class="nav-container-left">
-                <img id="globe" class="rotating" src="Logo/logo_atlas_globo_default.svg" alt="brandLogo" width="60px">
-                <img id="name" src="Logo/logo_atlas_default_textonly.svg" alt="">
-            </div>
+            <a href="index.html">
+                <div class="nav-container-left">
+                    <img id="globe" class="rotating" src="Logo/logo_atlas_globo_default.svg" alt="brandLogo"
+                        width="60px">
+                    <img id="name" src="Logo/logo_atlas_default_textonly.svg" alt="">
+                </div>
+            </a>
             <ul class="nav-links">
                 <li><a href="travelPacks.html">Travel Packs</a></li>
                 <li><a href="destinations.html">Destinations</a></li>
@@ -43,7 +46,7 @@
                         width="60px">
                     <img id="name" src="Logo/logo_atlas_default_textonly.svg" alt="">
                 </div>
-                <img id="close-icon" src="/Icons/close-x-svgrepo-com.svg" alt="">
+                <img id="close-icon" src="Icons/close-x-svgrepo-com.svg" alt="">
             </div>
             <div class="separation"></div>
             <ul>
@@ -68,12 +71,16 @@
             </div>
         </section>
         <section class="header-message">
+            <img src="Images/Hero/line.png" alt="">
+
             <div class="hero-message">
                 <h1>for Travelers<br /> from Locals</h1>
-                <p>Your travel companion<br> for meaningful adventures</p>
+                <div class="pin">
+                    <p>Your travel companion<br> for meaningful adventures</p>
+                    <img src="Images/Hero/pin-atlas.png" alt="">
+                </div>
             </div>
-            <div class="hero-message-two">
-            </div>
+
         </section>
         <!-- FEATURE TRIPS -->
         <section class="trips_display">
@@ -167,36 +174,38 @@
                     </div>
                     <span class="category">Adventure</span>
                 </div>
-                <div class="card">
-                    <div class="slideshow-container" data-index="4">
-                        <div class="mySlides fade">
-                            <img src="Images/Cards/card4_america1.png" alt="Slide 1">
+                <a href="productPage.html" style="cursor: pointer;">
+                    <div class="card">
+                        <div class="slideshow-container" data-index="4">
+                            <div class="mySlides fade">
+                                <img src="Images/Cards/card4_america1.png" alt="Slide 1">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="Images/Cards/card4_america2.png" alt="Slide 2">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="Images/Cards/card4_america3.png" alt="Slide 3">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="Images/Cards/card4_america4.png" alt="Slide 4">
+                            </div>
+                            <!-- Navigation Buttons -->
+                            <a class="prev" onclick="plusSlides(-1, 4)"><button>&#10094;</button></a>
+                            <a class="next" onclick="plusSlides(1, 4)"><button>&#10095;</button></a>
                         </div>
-                        <div class="mySlides fade">
-                            <img src="Images/Cards/card4_america2.png" alt="Slide 2">
-                        </div>
-                        <div class="mySlides fade">
-                            <img src="Images/Cards/card4_america3.png" alt="Slide 3">
-                        </div>
-                        <div class="mySlides fade">
-                            <img src="Images/Cards/card4_america4.png" alt="Slide 4">
-                        </div>
-                        <!-- Navigation Buttons -->
-                        <a class="prev" onclick="plusSlides(-1, 4)"><button>&#10094;</button></a>
-                        <a class="next" onclick="plusSlides(1, 4)"><button>&#10095;</button></a>
-                    </div>
 
-                    <div class="description">
-                        <p class="country">Chile & Argentinaa</p>
-                        <p class="packName">The Wonders of Patagonia
-                        </p>
-                        <div>
-                            <p class="days">12 days</p>
-                            <p class="price">4000€</p>
+                        <div class="description">
+                            <p class="country">Brazil, Argentina & Chile</p>
+                            <p class="packName">South American Wonders
+                            </p>
+                            <div>
+                                <p class="days">12 days</p>
+                                <p class="price">4000€</p>
+                            </div>
                         </div>
+                        <span class="category">Adventure</span>
                     </div>
-                    <span class="category">Adventure</span>
-                </div>
+                </a>
                 <div class="card">
                     <div class="slideshow-container" data-index="5">
                         <div class="mySlides fade">

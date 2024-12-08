@@ -139,6 +139,7 @@ nav .hamburger {
   padding-left: 48px;
   padding-right: 48px;
   position: absolute;
+
 }
 
 .show-menu {
@@ -235,10 +236,38 @@ nav .hamburger {
 
 /* hero section */
 
+
+.header-message{
+  position: relative;
+}
+
+.header-message img{
+  height: auto;
+  max-width: 100%;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.pin{
+  width: 33%;
+}
+
+.pin p{
+  font-size: var(--font-size-l);
+  color: var(--dark-blue-color);
+  padding-top: 120px;
+}
+
+.pin img{
+  padding: 0;
+  height: 98px;
+  width: 56px;
+}
+
 .hero {
   box-sizing: border-box;
   padding: 0 24px;
-  height: 530px;
+  height: auto;
   width: 100%;
   max-width: 1600px;
 }
@@ -322,10 +351,15 @@ nav .hamburger {
 }
 
 .hero-message {
+  position: absolute;
   display: flex;
   height: 264px;
   padding: 56px 48px 0 48px;
+  width: 100%;
+  top: 0;
 }
+
+
 
 .hero-message h1 {
   width: 67%;
@@ -335,13 +369,12 @@ nav .hamburger {
   color: var(--dark-blue-color);
 }
 
-.hero-message p {
+/* .hero-message  p {
   display: flex;
   align-items: end;
   width: 33%;
-  font-size: var(--font-size-l);
-  color: var(--dark-blue-color);
-}
+
+} */
 
 .hero-message-two {
   box-sizing: border-box;
@@ -414,7 +447,7 @@ nav .hamburger {
   }
 
   .hero {
-    height: 450px;
+    height: auto;
   }
 
   .hero-image {
@@ -424,6 +457,7 @@ nav .hamburger {
   .hero-message {
     flex-direction: column;
     padding-top: 0;
+    box-sizing: border-box;
   }
 
   .hero-message h1 {
@@ -439,6 +473,23 @@ nav .hamburger {
     width: 100%;
     text-align: right;
   }
+
+.hero-message .pin{
+  box-sizing: border-box;
+  width: 100%;
+   display: flex;
+    flex-direction: column;
+}
+
+
+  .hero-message .pin p{
+    padding-top: 0;
+    width: 100%;
+   
+  }
+  .hero-message .pin img{
+    margin-left: auto;
+  }
 }
 /*Featured Trips Section*/
 
@@ -451,6 +502,7 @@ nav .hamburger {
   height: 147px;
   width: 100%;
   padding-bottom: 64px;
+  padding-top: 160px;
 }
 
 .trips_display .title2 {
@@ -530,7 +582,9 @@ nav .hamburger {
 }
 
 .packName {
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 600;
+  height: 96px;
 }
 
 .description div {
@@ -701,6 +755,7 @@ nav .hamburger {
     color: var(--dark-blue-color);
     font-size: var(--font-size-h3);
     font-weight: 500;
+    padding-top: 64px;
   }
   .card-container {
     justify-content: center;
@@ -1129,7 +1184,7 @@ footer {
 }
 
 .pp-text h2 {
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-h1);
   color: var(--dark-blue-color);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -1437,6 +1492,14 @@ footer {
   opacity: 0.8;
 }
 
+.price .summary button a{
+  text-decoration: none;
+}
+
+.price .summary button a:visited{
+  color: var(--background-color);
+}
+
 .travel-details1250 {
   display: none;
 }
@@ -1690,7 +1753,9 @@ footer {
 }
 
 .travel_stories .travel-story-packName{
-  font-size: var(--font-size-l);
+  font-size: 32px;
+  font-weight: 600;
+  height: 96px;
 }
 
 
@@ -1901,12 +1966,13 @@ padding-top: 64px;
 .show-more {
   font-family: "poppins", sans-serif;
   font: weight 100;
+  font-size: 24px;
   color: var(--dark-blue-color);
   text-align: center;
   text-decoration: underline;
   cursor: pointer;
   transition: color 0.3s ease;
-  margin-top: 40px;
+  margin-top: 120px;
   margin-bottom: 120px;
 }
 
