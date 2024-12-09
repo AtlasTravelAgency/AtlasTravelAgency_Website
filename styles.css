@@ -1504,6 +1504,7 @@ footer {
 
 .price .summary button a:visited {
   color: var(--background-color);
+  text-decoration: none;
 }
 
 .travel-details1250 {
