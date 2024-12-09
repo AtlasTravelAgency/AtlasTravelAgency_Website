@@ -244,6 +244,7 @@ nav .hamburger {
   max-width: 100%;
   padding-left: 48px;
   padding-right: 48px;
+  box-sizing: border-box;
 }
 
 .pin {
@@ -347,6 +348,7 @@ nav .hamburger {
   font-family: "Poppins", sans-serif;
   font-size: var(--font-size-m);
 }
+
 
 .hero-message {
   position: absolute;
@@ -595,6 +597,12 @@ nav .hamburger {
 
 .description .price {
   font-size: var(--font-size-l);
+}
+
+.description .price strike{
+  font-size: var(--font-size-s);
+  padding-right: 8px;
+  color: var(--light-blue-color);
 }
 
 .category {
@@ -1425,6 +1433,9 @@ footer {
   padding: 80px 162px 0 16px;
 }
 
+
+
+
 .summary {
   display: flex;
   flex-direction: column;
@@ -1819,15 +1830,26 @@ footer {
   color: var(--light-blue-color);
 }
 
-#applyButton,
+#applyButton{
+  color: var(--dark-blue-color);
+  transition: all 0.2s ease;
+}
+
 #bookButton {
   background-color: var(--yellow-color);
   border: none;
   color: var(--background-color);
   transition: all 0.2s ease;
+  font-size: var(--font-size-l);
+  font-weight: 500;
 }
 
-#applyButton:hover,
+#applyButton:hover{
+background-color: var(--lighter-blue-color);
+border: 1px solid var(--lighter-blue-color)
+}
+
+
 #bookButton:hover {
   opacity: 0.8;
 }
