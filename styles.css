@@ -1507,6 +1507,11 @@ footer {
   text-decoration: none;
 }
 
+.price .summary button a:active {
+  color: var(--background-color);
+  text-decoration: none;
+}
+
 .travel-details1250 {
   display: none;
 }
