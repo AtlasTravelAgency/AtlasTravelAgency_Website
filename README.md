@@ -75,7 +75,7 @@ This project was completed as an educational exercise to learn the fundamentals 
 
 ## Acknowledgments
 We would like to thank:
-- Our instructor for their guidance throughout the project.
+- Our instructors for their guidance throughout the project.
 - OpenAI’s ChatGPT for assisting in generating educational and marketing copy.
 - Online resources and communities for providing royalty-free images.
 
