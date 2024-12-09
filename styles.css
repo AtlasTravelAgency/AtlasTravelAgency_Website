@@ -1569,11 +1569,28 @@ footer {
   border: none;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .price1150 button:hover {
   opacity: 0.8;
 }
+
+#button1150{
+  text-decoration: none;
+  color: var(--background-color);
+}
+
+#button1150:visited{
+  text-decoration: none;
+  color: var(--background-color);
+}
+
+#button1150:active{
+  text-decoration: none;
+  color: var(--background-color);
+}
+
 
 .price1150 {
   display: none;
